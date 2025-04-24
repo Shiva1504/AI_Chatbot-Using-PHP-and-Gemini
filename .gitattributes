@@ -1,2 +1,21 @@
-# Auto detect text files and perform LF normalization
+# Normalize all text files to LF in repo
 * text=auto
+
+# Explicitly mark text file types
+*.php  text
+*.js   text
+*.css  text
+*.html text
+*.json text
+*.env  text
+
+# Treat images/binaries as binary (no normalization)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.zip  binary
+
+# Prevent .env from being tracked if accidentally added
+.env export-ignore
